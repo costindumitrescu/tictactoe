@@ -1,40 +1,19 @@
 import React from 'react'
 import './Game.css';
 
+import { Board } from './Board/Board.js';
+
 export const Game = () => {
+  const cellValues = ['X', 'X', 'X', 'O', 'O', 'X', 'O', '', ''];
+  const winningCombination = [0, 1, 2];
+
   return (
     <>
       <div id="game">
         <h1>Tic Tac Toe</h1>
-        <div id="board">
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-          <button className="cell">
-            <span className="cell-content"></span>
-          </button>
-        </div>
+        <Board
+          cellValues={cellValues}
+          winningCombination={winningCombination}/>
       </div>
 
       <div id="modal-overlay">
